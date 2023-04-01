@@ -27,7 +27,96 @@ npm install
 ```sh
 npm run dev
 ```
-4.(For Unit Testing) Run this in a separate console:
+## Unit Testing
+(For Unit Testing) Run this in a separate console:
 ```sh
 npm test
 ```
+## Manual Testing
+
+API SENDING GUIDE
+
+-----------------------
+
+!! SPECIAL NOTE:
+
+You must login first using the login api before using the other APIs (for the session purpose);
+I will display response 401 for all other APIs requests if you didn't login first
+
+Also make sure that you imported the initial data for the database table users before you login , 
+because the credentials for admin account will be there. (See in user_management.sql)
+
+-----------------------
+
+LOGIN API
+
+Method: POST
+Endpoint: http://localhost:8080/login
+
+Headers:
+Content-Type: application/json
+
+Request Body:
+(See /sample-requestbody/signin.json)
+
+-----------------------
+
+GET USERS
+
+Method: GET
+Endpoint: http://localhost:8080/users
+
+-----------------------
+
+GET USER BY ID
+
+Method: GET
+Endpoint: http://localhost:8080/users/<USER ID>
+(e.g http://localhost:8080/users/1)
+
+-----------------------
+
+ADD USER
+
+Method: POST
+Endpoint: http://localhost:8080/users
+
+Headers:
+Content-Type: application/json
+
+Request Body:
+(See /sample-requestbody/adduser.json)
+
+-----------------------
+
+UPDATE USER
+
+Method: POST
+Endpoint: http://localhost:8080/users/update
+
+Headers:
+Content-Type: application/json
+
+Request Body:
+(See /sample-requestbody/updateuser.json)
+
+-----------------------
+
+DELETE SINGLE USER
+
+Method: DELETE
+Endpoint: http://localhost:8080/users/delete/<USER ID>
+(e.g http://localhost:8080/users/delete/1)
+
+-----------------------
+
+DELETE MULTIPLE USER
+
+Method: DELETE .
+Endpoint: http://localhost:8080/users/deleteusers
+
+Headers:
+Content-Type: application/json
+
+Request Body:
+(See /sample-requestbody/deleteusers.json)
