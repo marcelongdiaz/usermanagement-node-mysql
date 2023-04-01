@@ -1,0 +1,12 @@
+{
+	"id": "1",
+	"data": {
+		"first_name": "Admin",
+		"last_name": "Account",
+		"address": "Sample Address",
+		"post_code": "Sample Post Code",
+		"email": "admin@test.com",
+		"username": "admin",
+		"password": "123"
+	}
+}

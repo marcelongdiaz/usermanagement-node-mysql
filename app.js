@@ -16,7 +16,7 @@ app.use(express.static("public"));
 
 //session and role checker, only admin can perform edit/delete/add operation
 const auth_read = (req, res, next) => {
-    console.log(process.env.NODE_ENV)
+    
     if(req.session.loggedIn){
         req.session.cookie.expires = getNewExpirationTime();
         next();
